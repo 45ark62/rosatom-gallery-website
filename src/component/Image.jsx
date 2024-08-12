@@ -3,14 +3,13 @@ import galleryStore from "../store/gallery-store.js";
 import axios from "axios";
 import React from 'react'
 import { useState,useEffect } from "react";
-import Alert from 'react-bootstrap/Alert';
 const Image = ({ imagePreviewOn, onClose }) => {
     const [currentImage,setCurrentImage]= useState('')
     useEffect(() => {
       setCurrentImage(imagePreviewOn);
   }, [imagePreviewOn]);
   
-  const onclickPicturePreviewBack = (event) => {
+  const onclickPicturePreviewBack = () => {
     const curImageIndex = galleryStore.images.findIndex(item => item.picture_item === currentImage);
     console.log(curImageIndex)
     if (curImageIndex > 0) {
@@ -19,7 +18,7 @@ const Image = ({ imagePreviewOn, onClose }) => {
     } 
   };
 
-  const onclickPicturePreviewForward = (event) => {
+  const onclickPicturePreviewForward = () => {
       const curImageIndex = galleryStore.images.findIndex(item => item.picture_item === currentImage);;
       console.log(curImageIndex);
       if( curImageIndex<galleryStore.images.length-1){
@@ -36,8 +35,6 @@ const Image = ({ imagePreviewOn, onClose }) => {
      <div className="imagePreview"><img src={`${axios.defaults.baseURL}/assets/${currentImage}`} alt=""/></div>
        <img className='toggerIcons ' src="https://img.icons8.com/?size=100&id=61&format=png&color=000000" alt="Вперёд" onClick={onclickPicturePreviewForward}/>
     
-   
-   
        </div>
   
   )

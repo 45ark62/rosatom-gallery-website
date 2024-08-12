@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import axios from "axios";
 import galleryStore from "./store/gallery-store";
+
 import Image from "./component/Image";
 
 
 const Gallery=observer(()=> {
   const [imagePreviewOn,setImagePreviewOn] = useState('')
+  
   useEffect(() => {
     galleryStore.fetchImages();
   }, []);

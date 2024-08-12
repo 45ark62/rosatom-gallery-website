@@ -1,9 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -11,11 +5,18 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-<h1>adminUser<h1>
+# Админка в directus
 
 login:e89181515954@mail.ru
-
 password:123456789
+
+# Описание приложения
+## Стек: \
+React, mobx,axios,js,html,css. \
+## Реализованные функции: 
+- Админ загружает фото в БД через directus
+- Отображение списка полученных фото(Список обновляется каждые 5 секунд)
+- Возможность кликнуть по фото для его открытия в большем размере во всплывающем окне
+- Закрытие всплывающего окна
+- Возможность переключать между фото не закрывая всплывающее окно по клику на иконки '<' и '>' соответственно
+- Админка Directus доступна по адресу /directus 
