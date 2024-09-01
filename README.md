@@ -10,6 +10,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 login:e89181515954@mail.ru
 password:123456789
 
+Перед началом работы нужно запустить докер контейнер с directus,который будет работать на порту 8055
+
 # Описание приложения
 ## Стек: \
 React, mobx,axios,js,html,css. \
