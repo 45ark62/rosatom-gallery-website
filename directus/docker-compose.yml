@@ -1,0 +1,22 @@
+version: "3"
+services:
+  directus:
+    image: directus/directus:10.13.1
+    ports:
+      - 3000:8055
+    volumes:
+      - ./database:/directus/database
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    environment:
+      CORS_ENABLED: 'true'
+      CORS_ORIGIN: 'http://localhost:3000'
+      CORS_METHODS: 'GET,POST,PATCH,DELETE'
+      CORS_ALLOWED_HEADERS: 'Content-Type,Authorization,X-PINGOTHER,Content-Range'
+      CORS_EXPOSED_HEADERS: 'Content-Range'
+      SECRET: "replace-with-secure-random-value"
+      ADMIN_EMAIL: "e89181515954@mail.ru"
+      ADMIN_PASSWORD: "123456789"
+      DB_CLIENT: "sqlite3"
+      DB_FILENAME: "/directus/database/data.db"
+      WEBSOCKETS_ENABLED: "true"
